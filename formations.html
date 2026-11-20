@@ -1,168 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>StudyPilot | Professional Courses</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore les formations StudyPilot en intelligence artificielle, business, technologie, finance et créativité.">
+<title>Formations | StudyPilot</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#080b14;color:white}
-header{height:80px;padding:0 8%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #202638}
-.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
-.logo span{color:#2878ff}
-nav{display:flex;gap:25px;align-items:center}
-a{color:white;text-decoration:none}
-nav a:hover{color:#3985ff}
-button{cursor:pointer;border:0}
-.lang{background:#18243b;color:white;padding:10px 15px;border-radius:8px}
-.hero{text-align:center;padding:75px 20px 45px}
-.hero h1{font-size:45px;margin-bottom:15px}
-.hero h1 span{color:#347fff}
-.hero p{color:#aab4c8;font-size:17px;line-height:1.6}
-.search{margin:30px auto 15px;max-width:520px}
-.search input{width:100%;padding:16px;border-radius:10px;border:1px solid #303d55;background:#111827;color:white;font-size:15px}
-.filters{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;padding:15px}
-.filters button{padding:11px 17px;border-radius:25px;background:#151e30;color:#cbd5e1}
-.filters button.active,.filters button:hover{background:#2878ff;color:white}
-.section{padding:35px 8% 80px}
-.section h2{font-size:27px;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
-.card{background:#111827;border:1px solid #263248;border-radius:15px;overflow:hidden;transition:.25s}
-.card:hover{transform:translateY(-6px);border-color:#347fff}
-.icon{height:145px;display:flex;align-items:center;justify-content:center;font-size:58px;background:linear-gradient(135deg,#132b52,#17213a)}
-.content{padding:22px}
-.tag{font-size:11px;color:#60a0ff;text-transform:uppercase;font-weight:bold;letter-spacing:1px}
-.content h3{font-size:19px;margin:12px 0}
-.content p{font-size:13px;color:#aab4c8;line-height:1.6;min-height:42px}
-.bottom{display:flex;justify-content:space-between;align-items:center;margin-top:22px}
-.price{font-size:20px;font-weight:bold}
-.free{color:#39d98a}
-.paid{color:#69a3ff}
-.details{background:#2878ff;color:white;padding:11px 15px;border-radius:7px;font-weight:bold}
-.details:hover{background:#1260df}
-.empty{text-align:center;color:#9ba8bd;padding:40px;display:none}
-footer{padding:35px;text-align:center;color:#8490a5;border-top:1px solid #202638}
-.modal{display:none;position:fixed;inset:0;background:#000c;align-items:center;justify-content:center;padding:20px;z-index:10}
-.modal-box{background:#121c30;border:1px solid #34435d;border-radius:16px;padding:30px;max-width:480px;width:100%}
-.modal-box h2{margin-bottom:15px}
-.modal-box p{color:#b4bfd1;line-height:1.7;margin-bottom:20px}
-.close{float:right;background:#263650;color:white;padding:8px 12px;border-radius:6px}
-@media(max-width:600px){header{padding:0 5%}nav{gap:12px}.hero h1{font-size:33px}.section{padding:30px 5%}}
+:root{--bg:#080b12;--panel:#111a29;--text:#f5f8fc;--muted:#a2afc1;--blue:#2585ff;--cyan:#55b7ff;--line:rgba(255,255,255,.1);--green:#46d6a0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(37,133,255,.18),transparent 35%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;background:rgba(8,11,18,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:5}nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-weight:900;letter-spacing:.08em;font-size:1.25rem}.logo span{color:var(--cyan)}.links{display:flex;gap:24px;color:var(--muted)}.links a:hover{color:white}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--blue),#1762df);padding:12px 19px;border-radius:999px;font-weight:750;color:white;border:0;cursor:pointer}.ghost{display:inline-block;border:1px solid var(--line);padding:11px 18px;border-radius:999px;font-weight:700;background:transparent;color:white;cursor:pointer}
+.hero{padding:70px 0 35px}.eyebrow{color:var(--cyan);font-size:.76rem;letter-spacing:.17em;font-weight:850}.hero h1{font-size:clamp(2.6rem,6vw,4.5rem);letter-spacing:-.06em;line-height:1.03;margin:15px 0}.hero h1 span{color:var(--cyan)}.hero p,.muted{color:var(--muted);line-height:1.7}.hero p{max-width:680px;font-size:1.05rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+.stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:32px}.stat strong{display:block;font-size:1.3rem}.stat small{color:var(--muted)}
+section.catalog{padding:35px 0 70px}.section-head{margin-bottom:20px}.section-head h2{font-size:1.9rem;margin:8px 0}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.toolbar input,.toolbar select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:12px;padding:13px 15px}.toolbar input{flex:1 1 260px}.toolbar select{min-width:155px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.filter{border:1px solid var(--line);color:var(--muted);background:transparent;border-radius:999px;padding:8px 14px;cursor:pointer}.filter.active,.filter:hover{color:white;border-color:rgba(37,133,255,.7);background:rgba(37,133,255,.14)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:20px;border:1px solid var(--line);border-radius:19px;background:linear-gradient(160deg,var(--panel),#0d131e);transition:.2s}.card:hover{transform:translateY(-4px);border-color:rgba(85,183,255,.45)}.card-top{display:flex;align-items:center;justify-content:space-between}.icon{font-size:2rem}.badge{font-size:.7rem;letter-spacing:.07em;font-weight:850;padding:6px 9px;border-radius:999px;background:rgba(70,214,160,.12);color:var(--green)}.badge.premium{background:rgba(37,133,255,.16);color:var(--cyan)}.card h3{font-size:1.12rem;margin:16px 0 8px}.card p{color:var(--muted);font-size:.9rem;line-height:1.6;min-height:46px}.meta{font-size:.78rem;color:var(--muted);margin:12px 0}.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px;margin-top:14px}.price{font-size:1.15rem;font-weight:850}.price.free{color:var(--green)}.details{border:1px solid rgba(85,183,255,.5);color:var(--cyan);background:transparent;border-radius:999px;padding:8px 13px;font-weight:700;cursor:pointer}.empty{display:none;color:var(--muted);text-align:center;padding:35px;border:1px dashed var(--line);border-radius:18px;grid-column:1/-1}
+.notice{margin-top:25px;padding:15px 17px;border:1px solid var(--line);border-radius:13px;color:var(--muted);font-size:.82rem;line-height:1.6}.banner{margin:45px 0;padding:28px;border:1px solid rgba(85,183,255,.25);border-radius:22px;background:linear-gradient(110deg,rgba(37,133,255,.17),var(--panel));display:flex;align-items:center;justify-content:space-between;gap:18px}.banner p{color:var(--muted);max-width:650px;line-height:1.6}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.85rem}
+.modal-backdrop{display:none;position:fixed;inset:0;z-index:20;background:rgba(0,0,0,.75);padding:20px;align-items:center;justify-content:center}.modal-backdrop.show{display:flex}.modal{width:min(560px,100%);max-height:85vh;overflow:auto;background:#111a29;border:1px solid var(--line);border-radius:20px;padding:25px}.modal h2{margin:10px 0}.modal p,.modal li{color:var(--muted);line-height:1.65}.close{float:right;background:transparent;color:var(--muted);border:0;font-size:1.5rem;cursor:pointer}.modal-price{font-size:1.25rem;font-weight:850;color:var(--cyan)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.links{gap:13px}}
+@media(max-width:600px){.wrap{width:calc(100% - 28px)}nav{height:64px}.links{gap:10px;font-size:.82rem}.links a:nth-child(3){display:none}.grid{grid-template-columns:1fr}.banner{align-items:flex-start;flex-direction:column}.hero{padding:48px 0 25px}}
 </style>
 </head>
 <body>
-
-<header>
-<a href="index.html" class="logo">STUDY<span>PILOT</span></a>
-<nav>
-<a href="index.html" data-en="Home" data-fr="Accueil">Home</a>
-<a href="#courses" data-en="Courses" data-fr="Formations">Courses</a>
-<button class="lang" onclick="toggleLang()">FR / EN</button>
-</nav>
-</header>
-
-<section class="hero">
-<h1 data-en="Explore Your <span>Potential</span>" data-fr="Explorez votre <span>Potentiel</span>">Explore Your <span>Potential</span></h1>
-<p data-en="Learn new skills. Build your future. Create new opportunities." data-fr="Apprenez de nouvelles compétences. Construisez votre avenir. Créez de nouvelles opportunités.">Learn new skills. Build your future. Create new opportunities.</p>
-<div class="search">
-<input type="text" id="search" placeholder="Search for a course..." oninput="filterCourses()">
+<header><nav class="wrap"><a class="logo" href="index.html">STUDY<span>PILOT</span></a><div class="links"><a href="index.html" data-en="Home" data-fr="Accueil">Accueil</a><a href="#catalogue" data-en="Courses" data-fr="Formations">Formations</a><a href="#categories" data-en="Categories" data-fr="Catégories">Catégories</a></div><button class="btn" id="lang">FR / EN</button></nav></header>
+<main>
+<div class="wrap hero"><div class="eyebrow" data-en="LEARN • BUILD • GROW" data-fr="APPRENDRE • CRÉER • PROGRESSER">APPRENDRE • CRÉER • PROGRESSER</div>
+<h1 data-en="Build skills for your <span>next chapter.</span>" data-fr="Développe les compétences de ton <span>prochain chapitre.</span>">Développe les compétences de ton <span>prochain chapitre.</span></h1>
+<p data-en="Practical courses in AI, business, technology, finance and creativity. Start with free learning or unlock a premium course when you're ready." data-fr="Des formations pratiques en IA, business, technologie, finance et créativité. Commence gratuitement ou choisis une formation Premium quand tu es prêt.">Des formations pratiques en IA, business, technologie, finance et créativité. Commence gratuitement ou choisis une formation Premium quand tu es prêt.</p>
+<div class="actions"><a class="btn" href="#catalogue" data-en="Explore courses" data-fr="Explorer les formations">Explorer les formations</a><a class="ghost" href="#categories" data-en="Browse categories" data-fr="Voir les catégories">Voir les catégories</a></div>
+<div class="stats"><div class="stat"><strong>8</strong><small data-en="course previews" data-fr="formations au catalogue">formations au catalogue</small></div><div class="stat"><strong>Free + Premium</strong><small data-en="flexible learning" data-fr="apprentissage flexible">apprentissage flexible</small></div><div class="stat"><strong>FR + EN</strong><small data-en="bilingual platform" data-fr="plateforme bilingue">plateforme bilingue</small></div></div></div>
+<section class="wrap catalog" id="catalogue"><div class="section-head"><div class="eyebrow" data-en="THE STUDYPILOT CATALOGUE" data-fr="LE CATALOGUE STUDYPILOT">LE CATALOGUE STUDYPILOT</div><h2 data-en="Find your next course." data-fr="Trouve ta prochaine formation.">Trouve ta prochaine formation.</h2><p class="muted" data-en="Search by topic or filter by category and price." data-fr="Recherche par sujet ou filtre par catégorie et tarif.">Recherche par sujet ou filtre par catégorie et tarif.</p></div>
+<div class="toolbar"><input id="search" type="search" placeholder="Rechercher une formation..." aria-label="Rechercher une formation"><select id="priceFilter" aria-label="Filtrer par tarif"><option value="all">Tous les tarifs</option><option value="free">Gratuit</option><option value="premium">Premium</option></select><select id="categoryFilter" aria-label="Filtrer par catégorie"><option value="all">Toutes les catégories</option><option value="AI">IA & Innovation</option><option value="Business">Business</option><option value="Technology">Technologie</option><option value="Finance">Finance</option><option value="Creative">Créativité</option></select></div>
+<div class="filters" id="categories"><button class="filter active" data-filter="all">Tout</button><button class="filter" data-filter="free">Gratuit</button><button class="filter" data-filter="premium">Premium</button></div>
+<div class="grid" id="courseGrid">
+<article class="card" data-type="free" data-category="AI" data-search="ai intelligence artificielle beginner débutant chatgpt"><div class="card-top"><span class="badge">FREE</span><span class="icon">🤖</span></div><div class="meta">IA & Innovation · Débutant · 6 modules</div><h3 data-en="AI Skills for Beginners" data-fr="Les bases de l'intelligence artificielle">Les bases de l'intelligence artificielle</h3><p data-en="Understand AI, explore useful tools and learn how to use them responsibly." data-fr="Comprends l'IA, découvre des outils utiles et apprends à les utiliser de manière responsable.">Comprends l'IA, découvre des outils utiles et apprends à les utiliser de manière responsable.</p><div class="card-bottom"><span class="price free">GRATUIT</span><button class="details" data-course="ai">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="AI" data-search="prompt engineering prompts chatgpt ai"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">✍️</span></div><div class="meta">IA & Innovation · Débutant · 5 modules</div><h3 data-en="Prompt Engineering" data-fr="Maîtriser le Prompt Engineering">Maîtriser le Prompt Engineering</h3><p data-en="Write better prompts and get clearer, more useful results from AI tools." data-fr="Rédige de meilleurs prompts et obtiens des résultats plus clairs avec les outils IA.">Rédige de meilleurs prompts et obtiens des résultats plus clairs avec les outils IA.</p><div class="card-bottom"><span class="price">$14.99</span><button class="details" data-course="prompts">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Business" data-search="business entrepreneurship idea projet entreprise"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">💡</span></div><div class="meta">Business · Débutant · 4 modules</div><h3 data-en="From Idea to Business" data-fr="De l'idée au projet">De l'idée au projet</h3><p data-en="Learn how to identify a problem, shape an idea and plan a simple project." data-fr="Apprends à identifier un besoin, développer une idée et organiser un projet simple.">Apprends à identifier un besoin, développer une idée et organiser un projet simple.</p><div class="card-bottom"><span class="price">$19.99</span><button class="details" data-course="idea">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Business" data-search="online business ecommerce entrepreneurship marketing"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">🚀</span></div><div class="meta">Business · Débutant · 7 modules</div><h3 data-en="Start an Online Business" data-fr="Lancer un business en ligne">Lancer un business en ligne</h3><p data-en="Turn an idea into a structured digital project with a clear offer and audience." data-fr="Transforme une idée en projet numérique avec une offre et un public bien définis.">Transforme une idée en projet numérique avec une offre et un public bien définis.</p><div class="card-bottom"><span class="price">$29.99</span><button class="details" data-course="business">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Technology" data-search="website web development html css coding programmation"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">💻</span></div><div class="meta">Technologie · Débutant · 6 modules</div><h3 data-en="Create Your First Website" data-fr="Créer son premier site web">Créer son premier site web</h3><p data-en="Learn the foundations of HTML and CSS and publish a first website." data-fr="Apprends les bases du HTML et du CSS et publie ton premier site web.">Apprends les bases du HTML et du CSS et publie ton premier site web.</p><div class="card-bottom"><span class="price">$24.99</span><button class="details" data-course="website">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Technology" data-search="digital marketing social media content marketing"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">📣</span></div><div class="meta">Digital Skills · Débutant · 5 modules</div><h3 data-en="Digital Marketing Essentials" data-fr="Les bases du marketing digital">Les bases du marketing digital</h3><p data-en="Understand audiences, content strategy and the foundations of online promotion." data-fr="Comprends les audiences, la stratégie de contenu et les bases de la promotion en ligne.">Comprends les audiences, la stratégie de contenu et les bases de la promotion en ligne.</p><div class="card-bottom"><span class="price">$24.99</span><button class="details" data-course="marketing">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Creative" data-search="graphic design canva branding creativity design"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">🎨</span></div><div class="meta">Creative Studio · Débutant · 5 modules</div><h3 data-en="Graphic Design with Canva" data-fr="Design graphique avec Canva">Design graphique avec Canva</h3><p data-en="Create polished visuals, build a consistent style and design for digital platforms." data-fr="Crée des visuels soignés, développe un style cohérent et conçois pour le numérique.">Crée des visuels soignés, développe un style cohérent et conçois pour le numérique.</p><div class="card-bottom"><span class="price">$14.99</span><button class="details" data-course="design">Voir le programme</button></div></article>
+<article class="card" data-type="premium" data-category="Finance" data-search="personal finance budget saving money investment"><div class="card-top"><span class="badge premium">PREMIUM</span><span class="icon">📈</span></div><div class="meta">Finance · Débutant · 5 modules</div><h3 data-en="Personal Finance Foundations" data-fr="Les bases des finances personnelles">Les bases des finances personnelles</h3><p data-en="Explore budgeting, saving, financial goals and basic investing concepts." data-fr="Découvre le budget, l'épargne, les objectifs financiers et les notions de base de l'investissement.">Découvre le budget, l'épargne, les objectifs financiers et les notions de base de l'investissement.</p><div class="card-bottom"><span class="price">$19.99</span><button class="details" data-course="finance">Voir le programme</button></div></article>
+<div class="empty" id="empty">Aucune formation ne correspond à ta recherche.</div>
 </div>
-</section>
-
-<div class="filters">
-<button class="active" onclick="setFilter('all',this)" data-en="All" data-fr="Tout">All</button>
-<button onclick="setFilter('professional',this)">Professional</button>
-<button onclick="setFilter('ai',this)">AI & Innovation</button>
-<button onclick="setFilter('business',this)">Business</button>
-<button onclick="setFilter('digital',this)">Digital Skills</button>
-<button onclick="setFilter('finance',this)">Finance</button>
-<button onclick="setFilter('creative',this)">Creative Studio</button>
-</div>
-
-<section class="section" id="courses">
-<h2 data-en="Discover Our Courses" data-fr="Découvrez nos formations">Discover Our Courses</h2>
-<div class="grid" id="grid"></div>
-<div class="empty" id="empty">No courses found.</div>
-</section>
-
-<div class="modal" id="modal">
-<div class="modal-box">
-<button class="close" onclick="closeModal()">✕</button>
-<h2 id="modalTitle"></h2>
-<p id="modalDescription"></p>
-<h3 id="modalPrice"></h3>
-<br>
-<button class="details" onclick="alert(currentLang==='en'?'Enrollment coming soon!':'Inscriptions bientôt disponibles !')" data-en="Enroll Now" data-fr="S'inscrire">Enroll Now</button>
-</div>
-</div>
-
-<footer>
-STUDYPILOT © 2026 — Learn. Build. Grow.
-</footer>
-
+<div class="notice" data-en="Prices are catalogue prices in USD. Premium checkout is not activated yet, so no payment can be made on this page. Course content is being developed and will be published progressively." data-fr="Les prix du catalogue sont affichés en USD. Le paiement Premium n'est pas encore activé : aucun paiement ne peut être effectué sur cette page. Les contenus des formations sont en préparation et seront publiés progressivement.">Les prix du catalogue sont affichés en USD. Le paiement Premium n'est pas encore activé : aucun paiement ne peut être effectué sur cette page. Les contenus des formations sont en préparation et seront publiés progressivement.</div>
+<div class="banner"><div><div class="eyebrow" data-en="YOUR NEXT STEP" data-fr="TA PROCHAINE ÉTAPE">TA PROCHAINE ÉTAPE</div><h2 data-en="Choose a skill. Make it yours." data-fr="Choisis une compétence. Fais-en une force.">Choisis une compétence. Fais-en une force.</h2><p data-en="StudyPilot brings practical learning together in one place." data-fr="StudyPilot rassemble des formations pratiques dans un seul espace.">StudyPilot rassemble des formations pratiques dans un seul espace.</p></div><a class="btn" href="index.html" data-en="Back to home" data-fr="Retour à l'accueil">Retour à l'accueil</a></div>
+</section></main>
+<footer><div class="wrap">© <span id="year"></span> STUDYPILOT · Learn. Build. Grow.</div></footer>
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="close" id="closeModal" aria-label="Fermer">×</button><div class="eyebrow" data-en="COURSE OVERVIEW" data-fr="APERÇU DE LA FORMATION">APERÇU DE LA FORMATION</div><h2 id="modalTitle">Formation</h2><p id="modalDescription"></p><div class="modal-price" id="modalPrice"></div><ul id="modalModules"></ul><p id="modalNote" class="muted"></p><button class="btn" id="modalDone">Fermer</button></div></div>
 <script>
-let currentLang='en';
-let currentFilter='all';
-
-const courses=[
-{title:'AI Skills for Beginners',category:'ai',icon:'🤖',price:'FREE',description:'Discover artificial intelligence and learn how to use modern AI tools.'},
-{title:'Prompt Engineering',category:'ai',icon:'💡',price:'$14.99',description:'Master the art of writing effective prompts and getting better AI results.'},
-{title:'From Idea to Business',category:'business',icon:'🚀',price:'$19.99',description:'Turn your ideas into real business projects and learn the basics of entrepreneurship.'},
-{title:'Start an Online Business',category:'business',icon:'💼',price:'$29.99',description:'Discover how to build and develop your own online business.'},
-{title:'Create Your First Website',category:'digital',icon:'💻',price:'$24.99',description:'Learn the fundamentals of web development and create your first website.'},
-{title:'Digital Marketing',category:'professional',icon:'📈',price:'$24.99',description:'Understand digital marketing, social media and online growth strategies.'},
-{title:'Graphic Design with Canva',category:'creative',icon:'🎨',price:'$14.99',description:'Learn design principles and create professional visual content.'},
-{title:'Personal Finance',category:'finance',icon:'💰',price:'$19.99',description:'Understand budgeting, saving, financial planning and money management.'}
-];
-
-function renderCourses(){
-let search=document.getElementById('search').value.toLowerCase();
-let filtered=courses.filter(c=>(currentFilter==='all'||c.category===currentFilter)&&c.title.toLowerCase().includes(search));
-document.getElementById('grid').innerHTML=filtered.map((c,i)=>`
-<div class="card">
-<div class="icon">${c.icon}</div>
-<div class="content">
-<span class="tag">${c.category}</span>
-<h3>${c.title}</h3>
-<p>${c.description}</p>
-<div class="bottom">
-<span class="price ${c.price==='FREE'?'free':'paid'}">${c.price}</span>
-<button class="details" onclick="openModal('${c.title}')">${currentLang==='en'?'Discover':'Découvrir'}</button>
-</div>
-</div>
-</div>`).join('');
-document.getElementById('empty').style.display=filtered.length?'none':'block';
-}
-
-function setFilter(filter,btn){
-currentFilter=filter;
-document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
-btn.classList.add('active');
-renderCourses();
-}
-
-function filterCourses(){renderCourses()}
-
-let currentCourse=null;
-
-function openModal(title){
-currentCourse=courses.find(c=>c.title===title);
-document.getElementById('modalTitle').textContent=currentCourse.title;
-document.getElementById('modalDescription').textContent=currentCourse.description;
-document.getElementById('modalPrice').textContent=currentCourse.price;
-document.getElementById('modal').style.display='flex';
-}
-
-function closeModal(){document.getElementById('modal').style.display='none'}
-
-function toggleLang(){
-currentLang=currentLang==='en'?'fr':'en';
-document.querySelectorAll('[data-en]').forEach(el=>el.innerHTML=el.getAttribute('data-'+currentLang));
-document.getElementById('search').placeholder=currentLang==='en'?'Search for a course...':'Rechercher une formation...';
-renderCourses();
-}
-
-renderCourses();
+let lang="fr",activeFilter="all";
+const data={
+ai:{title:"Les bases de l'intelligence artificielle",en:"AI Skills for Beginners",price:"Gratuit",modules:["Comprendre ce qu'est l'IA","Découvrir les assistants IA","Écrire un prompt clair","Vérifier les réponses de l'IA","Utiliser l'IA de manière responsable","Mini-projet pratique"]},
+prompts:{title:"Maîtriser le Prompt Engineering",en:"Prompt Engineering",price:"$14.99",modules:["Comprendre les prompts","Donner du contexte et des consignes","Structurer une demande efficace","Améliorer les réponses","Atelier pratique"]},
+idea:{title:"De l'idée au projet",en:"From Idea to Business",price:"Gratuit",modules:["Identifier un besoin","Trouver une idée utile","Définir son public","Présenter son projet"]},
+business:{title:"Lancer un business en ligne",en:"Start an Online Business",price:"$29.99",modules:["Choisir un modèle de business","Étudier son marché","Définir son offre","Comprendre les clients","Créer une présence en ligne","Découvrir le marketing","Construire un plan de lancement"]},
+website:{title:"Créer son premier site web",en:"Create Your First Website",price:"$24.99",modules:["Comprendre le web","Préparer la structure du site","Découvrir HTML","Styliser avec CSS","Adapter le site au mobile","Publier son site"]},
+marketing:{title:"Les bases du marketing digital",en:"Digital Marketing Essentials",price:"$24.99",modules:["Comprendre le marketing digital","Identifier son audience","Créer du contenu utile","Découvrir les réseaux sociaux","Mesurer les résultats"]},
+design:{title:"Design graphique avec Canva",en:"Graphic Design with Canva",price:"$14.99",modules:["Principes visuels de base","Couleurs et typographie","Créer une identité cohérente","Concevoir des publications","Préparer ses exports"]},
+finance:{title:"Les bases des finances personnelles",en:"Personal Finance Foundations",price:"$19.99",modules:["Comprendre un budget","Organiser ses dépenses","Construire une épargne","Définir des objectifs","Découvrir les notions d'investissement"]}
+};
+const cards=[...document.querySelectorAll(".card[data-type]")];
+const search=document.getElementById("search"),priceFilter=document.getElementById("priceFilter"),categoryFilter=document.getElementById("categoryFilter");
+function filterCourses(){let term=search.value.toLowerCase().trim(),shown=0;cards.forEach(c=>{let ok=(c.innerText+" "+c.dataset.search).toLowerCase().includes(term)&&(activeFilter==="all"||c.dataset.type===activeFilter)&&(priceFilter.value==="all"||c.dataset.type===priceFilter.value)&&(categoryFilter.value==="all"||c.dataset.category===categoryFilter.value);c.style.display=ok?"":"none";if(ok)shown++;});document.getElementById("empty").style.display=shown?"none":"block";}
+search.addEventListener("input",filterCourses);priceFilter.addEventListener("change",filterCourses);categoryFilter.addEventListener("change",filterCourses);
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");activeFilter=b.dataset.filter;filterCourses();}));
+const backdrop=document.getElementById("modalBackdrop");function closeModal(){backdrop.classList.remove("show");}
+document.querySelectorAll(".details").forEach(b=>b.addEventListener("click",()=>{let c=data[b.dataset.course];document.getElementById("modalTitle").textContent=lang==="fr"?c.title:c.en;document.getElementById("modalDescription").textContent=lang==="fr"?"Voici les thèmes prévus dans cette formation :":"Topics planned for this course:";document.getElementById("modalPrice").textContent=c.price;document.getElementById("modalModules").innerHTML=c.modules.map(m=>"<li>"+m+"</li>").join("");document.getElementById("modalNote").textContent=lang==="fr"?"Le contenu complet sera publié progressivement.":"Full course content will be published progressively.";backdrop.classList.add("show");}));
+document.getElementById("closeModal").addEventListener("click",closeModal);document.getElementById("modalDone").addEventListener("click",closeModal);backdrop.addEventListener("click",e=>{if(e.target===backdrop)closeModal();});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+document.getElementById("lang").addEventListener("click",()=>{lang=lang==="fr"?"en":"fr";document.documentElement.lang=lang;document.querySelectorAll("[data-en][data-fr]").forEach(e=>e.innerHTML=e.dataset[lang]);document.getElementById("lang").textContent=lang==="fr"?"FR / EN":"EN / FR";document.getElementById("search").placeholder=lang==="fr"?"Rechercher une formation...":"Search courses...";document.getElementById("empty").textContent=lang==="fr"?"Aucune formation ne correspond à ta recherche.":"No courses match your search.";});
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-</body>
-</html>
+</body></html>
