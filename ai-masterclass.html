@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Masterclass | StudyPilot</title>
+<style>
+:root{--navy:#142b4d;--blue:#2e68c7;--cyan:#38b6b1;--ink:#1c2b3d;--muted:#68788c;--bg:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,Arial}
+header{background:linear-gradient(120deg,#102544,#214d83);color:white;padding:28px max(6vw,20px)}
+nav{display:flex;justify-content:space-between;align-items:center;max-width:1120px;margin:auto}nav a{color:#dceaff;text-decoration:none}
+.hero{max-width:1120px;margin:52px auto 30px;padding:0 22px}.eyebrow{color:#8ce3dd;font-weight:700;letter-spacing:.14em;font-size:12px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.08;margin:12px 0}.hero p{max-width:760px;color:#e2eaf5;font-size:18px}
+.pill{display:inline-block;border:1px solid #6c91bd;border-radius:30px;padding:7px 13px;margin:5px 6px 0 0;font-size:13px}
+.wrap{max-width:1120px;margin:32px auto;padding:0 22px}.grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.panel,.module{background:white;border:1px solid #e3e9f1;border-radius:16px;padding:22px;box-shadow:0 8px 26px #18365a0b}
+h2{color:var(--navy);margin-top:0}.module{margin:12px 0;padding:0;overflow:hidden}.module summary{cursor:pointer;list-style:none;padding:18px 20px;font-weight:750;color:var(--navy)}.module summary:after{content:'+';float:right;color:var(--blue)}.module[open] summary:after{content:'−'}
+.module .inside{padding:0 20px 20px;color:var(--muted)}.tag{font-size:12px;color:#237c7b;font-weight:700}
+.btn{display:inline-block;background:var(--blue);color:white;text-decoration:none;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer}
+.price{font-size:34px;font-weight:800;color:var(--navy)}.muted{color:var(--muted);font-size:14px}.resource{display:block;margin:10px 0;padding:12px;border-radius:10px;background:#f1f6fc;color:#17477e;text-decoration:none;font-weight:650}
+.notice{background:#fff8e8;border:1px solid #f1d79b;padding:14px;border-radius:12px;color:#775619;font-size:14px}
+footer{text-align:center;padding:30px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.hero{margin-top:34px}}
+</style></head>
+<body>
+<header><nav><strong>STUDYPILOT</strong><a href="formations.html">← Back to courses / Retour aux formations</a></nav>
+<section class="hero"><div class="eyebrow">PROFESSIONAL BILINGUAL PROGRAMME</div>
+<h1>AI Masterclass</h1><p>Build practical AI skills through eight structured modules, bilingual lessons, knowledge checks and a portfolio-ready capstone project.</p>
+<p>Développez des compétences pratiques en IA grâce à huit modules structurés, des leçons bilingues, des quiz et un projet final à présenter.</p>
+<span class="pill">English + Français</span><span class="pill">8 modules</span><span class="pill">18–22 hours</span><span class="pill">Beginner → Advanced</span>
+</section></header>
+<main class="wrap"><div class="grid"><section>
+<div class="panel"><h2>Curriculum / Programme</h2><p class="muted">Choose a module to view its focus. Select English or French in the coursebook and workbook.</p>
+<div id="modules"></div></div>
+<div class="panel" style="margin-top:20px"><h2>Final project / Projet final</h2>
+<p><b>EN:</b> Define a real problem, design a responsible AI workflow or prototype, test it, document evidence and limitations, and present next steps.</p>
+<p><b>FR :</b> Définissez un problème réel, concevez un workflow ou prototype IA responsable, testez-le, documentez les preuves et limites, puis présentez les prochaines étapes.</p></div>
+</section>
+<aside><div class="panel"><div class="tag">PREMIUM COURSE</div><div class="price">$39.99 <small style="font-size:13px">USD</small></div>
+<p class="muted">One-time course price planned / Prix unique prévu</p>
+<div class="notice"><b>Enrolment is not open yet.</b><br>Payment checkout must be connected and tested before accepting purchases. Les inscriptions payantes restent fermées jusqu’à la configuration et au test du paiement.</div>
+<hr style="border:0;border-top:1px solid #e4eaf1;margin:20px 0">
+<h2>Course resources / Ressources</h2>
+<a class="resource" href="StudyPilot_AI_Masterclass_Coursebook_EN-FR.pdf" download>↓ Bilingual coursebook (PDF)</a>
+<a class="resource" href="StudyPilot_AI_Masterclass_Workbook_EN-FR.pdf" download>↓ Learner workbook (PDF)</a>
+<a class="resource" href="StudyPilot_AI_Masterclass_Video_Scripts_Bilingual.docx" download>↓ Video scripts (DOCX)</a>
+<p class="muted">The scripts are ready-to-record narration, not finished video recordings. Les scripts sont prêts à être enregistrés ; ce ne sont pas des vidéos déjà filmées.</p>
+</div></aside></div>
+<div class="panel" style="margin-top:24px"><h2>Learning standard / Engagement pédagogique</h2>
+<p>StudyPilot provides independent educational training and a certificate of completion only. It is not an accredited degree or professional licence. AI outputs must be checked; learners should respect privacy, copyright, permissions and tool terms.</p>
+<p>StudyPilot propose une formation éducative indépendante et une attestation de fin de formation uniquement. Ce n’est pas un diplôme accrédité ni une licence professionnelle. Les résultats de l’IA doivent être vérifiés ; respectez la confidentialité, le droit d’auteur, les autorisations et les conditions des outils.</p></div>
+</main><footer>© StudyPilot • Learn. Build. Improve.</footer>
+<script>
+const data=[
+["01 — Understanding Artificial Intelligence","01 — Comprendre l’intelligence artificielle","AI concepts, machine learning, generative AI, model lifecycle, strengths and limitations.","Concepts de l’IA, apprentissage automatique, IA générative, cycle des modèles, capacités et limites."],
+["02 — Mastering AI Tools","02 — Maîtriser les outils d’IA","Tool categories, selection criteria, comparison and reliable workflows.","Catégories d’outils, critères de sélection, comparaison et processus fiables."],
+["03 — Professional Prompt Engineering","03 — Le prompt engineering professionnel","Prompt structure, context, examples, iteration, testing and quality control.","Structure du prompt, contexte, exemples, itération, tests et contrôle qualité."],
+["04 — AI for Business & Entrepreneurship","04 — IA, entreprise et entrepreneuriat","Customer problems, value propositions, business cases and responsible adoption.","Problèmes clients, propositions de valeur, cas d’usage et adoption responsable."],
+["05 — AI Automation & Productivity","05 — Automatisation et productivité avec l’IA","Workflow mapping, triggers, approvals, monitoring and manual fallbacks.","Cartographie des processus, déclencheurs, validations, suivi et solutions manuelles."],
+["06 — AI Content Creation","06 — Création de contenu avec l’IA","Research, writing, visual concepts, editing, rights and factual review.","Recherche, rédaction, concepts visuels, édition, droits et vérification des faits."],
+["07 — Building AI Assistants & Applications","07 — Créer des assistants et applications IA","Assistant specifications, tool use, boundaries, testing and user experience.","Spécifications, utilisation d’outils, limites, tests et expérience utilisateur."],
+["08 — Advanced AI Projects & Professional Practice","08 — Projets avancés et pratique professionnelle","Capstone design, evaluation, documentation, portfolio and professional delivery.","Conception du projet final, évaluation, documentation, portfolio et présentation."]
+];
+document.getElementById('modules').innerHTML=data.map((m,i)=>`<details class="module" ${i===0?'open':''}><summary>${m[0]} <span class="muted">/ ${m[1]}</span></summary><div class="inside"><b>EN:</b> ${m[2]}<br><b>FR :</b> ${m[3]}<p class="tag">Practical activity + knowledge check + project / Activité pratique + quiz + projet</p></div></details>`).join('');
+</script></body></html>
